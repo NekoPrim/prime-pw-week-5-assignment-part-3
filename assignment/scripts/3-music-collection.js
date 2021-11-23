@@ -8,38 +8,38 @@ console.log(collection);
 
 //add a function named addToCollection
 
-function addToCollection(title, artist, yearPublished) {
+const addToCollection = (array, title, artist, yearPublished) => {
     console.log('in addToCollection');
-    let album = [title, artist, yearPublished];
-    collection.push(album);
-    return `added ${album}`;
+    let x = [title, artist, yearPublished];
+    array.push(x);
+    return `added ${x}`;
 }
 
 //add 6 albums
 
-console.log(addToCollection('Cups', 'Anna Kendrick', 2013));
+console.log(addToCollection(collection, 'Cups', 'Anna Kendrick', 2013));
 
 console.log(collection);
 
-console.log(addToCollection('4k', 'El Alfa', 2020));
+console.log(addToCollection(collection, '4k', 'El Alfa', 2020));
 
-console.log(addToCollection('Makeba', 'Jain', 2017));
+console.log(addToCollection(collection, 'Makeba', 'Jain', 2017));
 
 console.log(collection);
 
-console.log(addToCollection('Bang', 'AJR', 2020));
+console.log(addToCollection(collection, 'Bang', 'AJR', 2020));
 
-console.log(addToCollection('Burn the House Down', 'AJR', 2018));
+console.log(addToCollection(collection, 'Burn the House Down', 'AJR', 2018));
 
-console.log(addToCollection('Sugar', 'Robin Schulz', 2015));
+console.log(addToCollection(collection, 'Sugar', 'Robin Schulz', 2015));
 
 console.log(collection);
 
 //add a function named showCollection
 
-function showCollection() {
+const showCollection = (array) => {
     console.log('in showCollection');
-    for (x of collection) {
+    for (x of array) {
         console.log(x);
     }
 }
