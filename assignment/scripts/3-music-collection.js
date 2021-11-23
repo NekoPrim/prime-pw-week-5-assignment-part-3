@@ -2,7 +2,8 @@ console.log('***** Music Collection *****')
 
 //create a variable collections
 
-const collection = [];
+const
+ collection = [];
 
 console.log(collection);
 
@@ -12,7 +13,7 @@ const addToCollection = (array, title, artist, yearPublished) => {
     console.log('in addToCollection');
     let x = [title, artist, yearPublished];
     array.push(x);
-    return `added ${x}`;
+    return `added: ${x}`;
 }
 
 //add 6 albums
@@ -37,10 +38,10 @@ console.log(collection);
 
 //add a function named showCollection
 
-const showCollection = (array) => {
+const showCollection = (object) => {
     console.log('in showCollection');
-    for (x of array) {
-        console.log(x);
+    for (let x = 0; x < object.length; x ++) {
+        console.log('Title:', object[x][0], 'By artist:', object[x][1], 'Published in year:', object[x][2]);
     }
 }
 
