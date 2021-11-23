@@ -41,10 +41,32 @@ console.log(collection);
 const showCollection = (object) => {
     console.log('in showCollection');
     for (let x = 0; x < object.length; x ++) {
-        console.log('Title:', object[x][0], 'By artist:', object[x][1], 'Published in year:', object[x][2]);
+        console.log(object[x]);
+        console.log('Title:', object[x][0], '/ By artist:', object[x][1], '/ Published in year:', object[x][2]);
     }
 }
 
 //test showCollection
 
 showCollection(collection);
+
+//add a function named findByArtist
+
+const findByArtist = (object, artist) => {
+    console.log('in findByArtist');
+    for (let x = 0; x < object.length; x ++) {
+        console.log('in loop');
+        if (artist === object[x][1]) {
+            return artist;
+        }
+        if (artist != object[x][1] && x > object.length) {
+            return `${artist} is not in collection`;
+        }
+    }
+}
+
+//test findByArtist
+
+console.log(findByArtist(collection, 'Robin Schulz'));
+
+console.log(findByArtist(collection, 'Britany Spears'));
