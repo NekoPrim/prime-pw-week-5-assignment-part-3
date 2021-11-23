@@ -57,10 +57,12 @@ const findByArtist = (object, artist) => {
     for (let x = 0; x < object.length; x ++) {
         console.log('in loop');
         if (artist === object[x][1]) {
-            return artist;
+            console.log(`looking for ${artist}`);
+            return object[x];
         }
-        if (artist != object[x][1] && x > object.length) {
-            return `${artist} is not in collection`;
+        if (artist != object[x][1] && x >= object.length) {
+            console.log(`looking for ${artist}`);
+            return `${artist} is not in this collection`;
         }
     }
 }
@@ -68,5 +70,7 @@ const findByArtist = (object, artist) => {
 //test findByArtist
 
 console.log(findByArtist(collection, 'Robin Schulz'));
+
+console.log(findByArtist(collection, 'AJR'));
 
 console.log(findByArtist(collection, 'Britany Spears'));
