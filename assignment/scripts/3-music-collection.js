@@ -1,4 +1,4 @@
-console.log('***** Music Collection *****')
+console.log('***** Music Collection *****');
 
 //create a variable collections
 
@@ -15,7 +15,7 @@ const addToCollection = (object, title, artist, yearPublished) => {
     let x = [title, artist, yearPublished];
     object.push(x);
     return `added: ${x}`;
-}
+};
 
 //add 6 albums
 
@@ -39,14 +39,14 @@ console.log('collection:', collection);
 
 //add a function named showCollection
 
-const showCollection = (object) => {
+const showCollection = (array) => {
     console.log('in showCollection');
-    console.log(object);
-    for (let x = 0; x < object.length; x ++) {
-        console.log('Title:', object[x][0], '/ By artist:', object[x][1], '/ Published in year:', object[x][2]);
+    console.log(array);
+    for (let x = 0; x < array.length; x ++) {
+        console.log('Title:', array[x][0], '/ By artist:', array[x][1], '/ Published in year:', array[x][2]);
     }
     return true;
-}
+};
 
 //test showCollection
 
@@ -54,16 +54,17 @@ showCollection(collection);
 
 //add a function named findByArtist
 
-const findByArtist = (object, artist) => {
+const findByArtist = (array, artist) => {
     console.log('in findByArtist');
+    console.log(`looking for ${artist}`);
     let album = [];
-    for (let x = 0; x < object.length; x ++) {
-        if (object[x][1] === artist) {
-            album.push(object[x])
+    for (let x = 0; x < array.length; x ++) {
+        if (array[x][1] === artist) {
+            album.push(array[x]);
         }
     }
     return album;
-}
+};
 
 //test findByArtist
 
@@ -72,3 +73,27 @@ console.log(findByArtist(collection, 'Robin Schulz'));
 console.log(findByArtist(collection, 'AJR'));
 
 console.log(findByArtist(collection, 'Britany Spears'));
+
+//**Stretch Goals*/
+//add a function called search
+
+const search = (array, song) => {
+    console.log('in search');
+    let album = [];
+    for (let x = 0; x < array.length; x ++) {
+        console.log('in loop');
+        if (array[x][0] === song) {
+            album.push(array[x][1], array[x][2]);
+        }
+        if (song === null) {
+            return array;
+        }
+    }
+    return album;
+};
+
+console.log(search(collection, 'Burn the House Down'));
+
+console.log(search(collection, 'Banana Phone'));
+
+console.log(search(collection, ));

@@ -1,0 +1,30 @@
+@import url(https://db.onlinewebfonts.com/c/883756f25ff46aaa14031d186be25560?family=flower1);
+@font-face {font-family: "flower1"; src: url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.eot"); src: url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.woff") format("woff"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.svg#flower1") format("svg"); }
+
+
+body {
+    background-color: aliceblue;
+    border: 100px solid transparent;
+    border-image: url(flowerBorder.png) 150 stretch;
+}
+
+header {
+    border-bottom: 3px solid lightcoral;
+    color: lightcoral;
+    font-family: "flower1";
+    font-size: 35px;
+    text-align: center;
+}
+
+.question {
+    text-align: center;
+}
+
+footer {
+    border-top: 3px solid lightcoral;
+    bottom: 1rem;
+    color: lightcoral;
+    font-family: "flower1";
+    font-size: 50px;
+    text-align: center;
+}
