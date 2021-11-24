@@ -2,12 +2,13 @@ console.log('***** Music Collection *****')
 
 //create a variable collections
 
-const
- collection = [];
+const collection = [];
 
 console.log('collection', collection);
 
 //add a function named addToCollection
+//**I made all my functions const again cuz of being issues with when i first load the page*/
+//**Empy arrays do not show empty. Talked in class and was told it was a chrome error*/
 
 const addToCollection = (object, title, artist, yearPublished) => {
     console.log('in addToCollection');
@@ -40,11 +41,11 @@ console.log('collection:', collection);
 
 const showCollection = (object) => {
     console.log('in showCollection');
+    console.log(object);
     for (let x = 0; x < object.length; x ++) {
-        console.log(object[x]);
+        console.log('Title:', object[x][0], '/ By artist:', object[x][1], '/ Published in year:', object[x][2]);
     }
-    return 'Title:', object[x][0], '/ By artist:', object[x][1], '/ Published in year:', object[x][2];
-
+    return true;
 }
 
 //test showCollection
@@ -55,14 +56,13 @@ showCollection(collection);
 
 const findByArtist = (object, artist) => {
     console.log('in findByArtist');
-    let x = 0;
-    for (let x in object) {
-        console.log('in loop');
+    let album = [];
+    for (let x = 0; x < object.length; x ++) {
         if (object[x][1] === artist) {
-            console.log(`looking for ${artist}`);
+            album.push(object[x])
         }
     }
-    return object[x];
+    return album;
 }
 
 //test findByArtist
