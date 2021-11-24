@@ -1,11 +1,15 @@
 @import url(https://db.onlinewebfonts.com/c/883756f25ff46aaa14031d186be25560?family=flower1);
 @font-face {font-family: "flower1"; src: url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.eot"); src: url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.woff") format("woff"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/883756f25ff46aaa14031d186be25560.svg#flower1") format("svg"); }
 
+@import url(https://db.onlinewebfonts.com/c/249a20978c781fa802558722634973ad?family=cuteso);
+@font-face {font-family: "cuteso"; src: url("https://db.onlinewebfonts.com/t/249a20978c781fa802558722634973ad.eot"); src: url("https://db.onlinewebfonts.com/t/249a20978c781fa802558722634973ad.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/249a20978c781fa802558722634973ad.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/249a20978c781fa802558722634973ad.woff") format("woff"), url("https://db.onlinewebfonts.com/t/249a20978c781fa802558722634973ad.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/249a20978c781fa802558722634973ad.svg#cuteso") format("svg"); }
+
 
 body {
     background-color: aliceblue;
-    border: 100px solid transparent;
+    border: 150px solid transparent;
     border-image: url(flowerBorder.png) 150 stretch;
+    height: 100%;
 }
 
 header {
@@ -17,12 +21,27 @@ header {
 }
 
 .question {
+    background-color: lightcoral;
+    border-radius: 10px;
+    color: darkslategrey;
+    font-family: "cuteso";
+    margin-left: 5rem;
+    margin-right: 5rem;
     text-align: center;
+}
+
+h2 {
+    padding-top: 2rem;
+}
+
+ul {
+    list-style-position: inside;
+    padding-bottom: 2rem;
+    padding-top: 5px;
 }
 
 footer {
     border-top: 3px solid lightcoral;
-    bottom: 1rem;
     color: lightcoral;
     font-family: "flower1";
     font-size: 50px;
