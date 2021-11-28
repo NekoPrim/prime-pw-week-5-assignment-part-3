@@ -77,23 +77,22 @@ console.log(findByArtist(collection, 'Britany Spears'));
 //**Stretch Goals*/
 //add a function called search
 
-const search = (array, song) => {
+const search = (array, item) => {
     console.log('in search');
+    if (!item) return null;
     let album = [];
     for (let x = 0; x < array.length; x ++) {
         console.log('in loop');
-        if (array[x][0] === song) {
-            album.push(array[x][1], array[x][2]);
-        }
-        if (song === null) {
-            return array;
+        if (array[x][0] === item) {
+            album.push(array[x]);
+            console.log('Title:', array[x][0], '/ By artist:', array[x][1], '/ Published in year:', array[x][2]);
         }
     }
     return album;
 };
 
-console.log(search(collection, 'Burn the House Down'));
+search(collection, 'Burn the House Down');
 
-console.log(search(collection, 'Banana Phone'));
+search(collection, 'Banana Phone');
 
-console.log(search(collection, ));
+search(collection, );
