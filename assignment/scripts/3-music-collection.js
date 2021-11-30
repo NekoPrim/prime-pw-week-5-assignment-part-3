@@ -10,11 +10,15 @@ console.log('collection', collection);
 //**I made all my functions const again cuz of being issues with when i first load the page*/
 //**Empy arrays do not show empty. Talked in class and was told it was a chrome error*/
 
-const addToCollection = (object, title, artist, yearPublished) => {
+function addToCollection(object, itemX, itemY, itemZ) {
     console.log('in addToCollection');
-    let x = [title, artist, yearPublished];
+    let x = {
+        title: itemX,
+        artist: itemY,
+        yearPublished: itemZ
+    }
     object.push(x);
-    return `added: ${x}`;
+    return `added: ${itemX}, ${itemY}, ${itemZ}`;
 };
 
 //add 6 albums
@@ -39,11 +43,11 @@ console.log('collection:', collection);
 
 //add a function named showCollection
 
-const showCollection = (array) => {
+function showCollection(array) {
     console.log('in showCollection');
-    console.log(array);
+    console.log(array.length);
     for (let x = 0; x < array.length; x ++) {
-        console.log('Title:', array[x][0], '/ By artist:', array[x][1], '/ Published in year:', array[x][2]);
+        console.log(array[x]);
     }
     return true;
 };
@@ -54,12 +58,15 @@ showCollection(collection);
 
 //add a function named findByArtist
 
-const findByArtist = (array, artist) => {
+collection.artist.indexOf('Robin Schulz');
+
+function findByArtist(array, item) {
     console.log('in findByArtist');
-    console.log(`looking for ${artist}`);
+    console.log(`looking for ${item}`);
     let album = [];
-    for (let x = 0; x < array.length; x ++) {
-        if (array[x][1] === artist) {
+    let y = collection.artist.indexOf(item);
+    for (let x in array.artist) {
+        if (x === item) {
             album.push(array[x]);
         }
     }
@@ -85,7 +92,7 @@ const search = (array, item) => {
         console.log('in loop');
         if (array[x][0] === item) {
             album.push(array[x]);
-            console.log('Title:', array[x][0], '/ By artist:', array[x][1], '/ Published in year:', array[x][2]);
+            console.log('Title:', array[x][0], ', Artist:', array[x][1], ', Year:', array[x][2]);
         }
     }
     return album;
@@ -93,6 +100,11 @@ const search = (array, item) => {
 
 search(collection, 'Burn the House Down');
 
+search(collection, 'AJR');
+
 search(collection, 'Banana Phone');
 
 search(collection, );
+
+//update tracks
+
