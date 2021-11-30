@@ -58,26 +58,25 @@ showCollection(collection);
 
 //add a function named findByArtist
 
-function findByArtist(item) {
+function findByArtist(artistName) {
     console.log('in findByArtist');
-    console.log(`looking for ${item}`);
-    let album = [];
-    let y = collection.artist.indexOf(item);
-    for (let x in collection.artist) {
-        if (x === item) {
-            album.push(array[x]);
+    console.log(`looking for ${artistName}`);
+    let x = [];
+    for (let album of collection) {
+        if (album.artist === artistName) {
+            x.push(album);
         }
     }
-    return album;
+    return x;
 }
 
 //test findByArtist
 
-console.log(findByArtist(collection, 'Robin Schulz'));
+console.log(findByArtist('El Alfa'));
 
-console.log(findByArtist(collection, 'AJR'));
+console.log(findByArtist('AJR'));
 
-console.log(findByArtist(collection, 'Britany Spears'));
+console.log(findByArtist('Britany Spears'));
 
 //**Stretch Goals*/
 //add a function called search
