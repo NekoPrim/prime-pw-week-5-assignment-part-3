@@ -10,51 +10,51 @@ console.log('collection', collection);
 //**I made all my functions const again cuz of being issues with when i first load the page*/
 //**Empy arrays do not show empty. Talked in class and was told it was a chrome error*/
 
-function addToCollection(object, itemX, itemY, itemZ) {
+function addToCollection(itemX, itemY, itemZ) {
     console.log('in addToCollection');
     let x = {
         title: itemX,
         artist: itemY,
         yearPublished: itemZ
     }
-    object.push(x);
+    collection.push(x);
     return `added: ${itemX}, ${itemY}, ${itemZ}`;
 };
 
 //add 6 albums
 
-console.log(addToCollection(collection, 'Cups', 'Anna Kendrick', 2013));
+console.log(addToCollection('Cups', 'Anna Kendrick', 2013));
 
 console.log('collection:', collection);
 
-console.log(addToCollection(collection, '4k', 'El Alfa', 2020));
+console.log(addToCollection('4k', 'El Alfa', 2020));
 
-console.log(addToCollection(collection, 'Makeba', 'Jain', 2017));
+console.log(addToCollection('Makeba', 'Jain', 2017));
 
 console.log('collection:', collection);
 
-console.log(addToCollection(collection, 'Bang', 'AJR', 2020));
+console.log(addToCollection('Bang', 'AJR', 2020));
 
-console.log(addToCollection(collection, 'Burn the House Down', 'AJR', 2018));
+console.log(addToCollection('Burn the House Down', 'AJR', 2018));
 
-console.log(addToCollection(collection, 'Sugar', 'Robin Schulz', 2015));
+console.log(addToCollection('Sugar', 'Robin Schulz', 2015));
 
 console.log('collection:', collection);
 
 //add a function named showCollection
 
-function showCollection(array) {
+function showCollection() {
     console.log('in showCollection');
-    console.log(array.length);
-    for (let x = 0; x < array.length; x ++) {
-        console.log(array[x]);
+    console.log(collection.length);
+    for (let x = 0; x < collection.length; x ++) {
+        console.log(collection[x]);
     }
     return true;
 };
 
 //test showCollection
 
-showCollection(collection);
+showCollection();
 
 //add a function named findByArtist
 
