@@ -10,68 +10,66 @@ console.log('collection', collection);
 //**I made all my functions const again cuz of being issues with when i first load the page*/
 //**Empy arrays do not show empty. Talked in class and was told it was a chrome error*/
 
-function addToCollection(itemX, itemY, itemZ) {
+function addToCollection(x, y, z) {
     console.log('in addToCollection');
-    let x = {
-        title: itemX,
-        artist: itemY,
-        yearPublished: itemZ
+    let album = {
+        title: x,
+        artist: y,
+        yearPublished: z
     }
-    collection.push(x);
-    return `added: ${itemX}, ${itemY}, ${itemZ}`;
-};
+    collection.push(album);
+    return album;
+}
 
 //add 6 albums
 
-console.log(addToCollection('Cups', 'Anna Kendrick', 2013));
+console.log(addToCollection('Folk Songs of the Hills', 'Merle Travis', 1947));
 
 console.log('collection:', collection);
 
-console.log(addToCollection('4k', 'El Alfa', 2020));
+console.log(addToCollection('El Androide', 'El Alfa', 2020));
 
-console.log(addToCollection('Makeba', 'Jain', 2017));
+console.log(addToCollection('Zanaka', 'Jain', 2015));
 
 console.log('collection:', collection);
 
-console.log(addToCollection('Bang', 'AJR', 2020));
+console.log(addToCollection('OK Orchestra', 'AJR', 2020));
 
-console.log(addToCollection('Burn the House Down', 'AJR', 2018));
+console.log(addToCollection('The Click', 'AJR', 2018));
 
-console.log(addToCollection('Sugar', 'Robin Schulz', 2015));
+console.log(addToCollection('Life in a Cartoon', 'Mika', 2007));
 
 console.log('collection:', collection);
 
 //add a function named showCollection
 
-function showCollection() {
+function showCollection(array) {
     console.log('in showCollection');
-    console.log(collection.length);
-    for (let x = 0; x < collection.length; x ++) {
-        console.log(collection[x]);
+    console.log('number of items in array:', array.length);
+    for (let album of array) {
+        console.log(album.title, 'by', album.artist, 'published in year', album.yearPublished);
     }
     return true;
-};
+}
 
 //test showCollection
 
-showCollection();
+showCollection(collection);
 
 //add a function named findByArtist
 
-collection.artist.indexOf('Robin Schulz');
-
-function findByArtist(array, item) {
+function findByArtist(item) {
     console.log('in findByArtist');
     console.log(`looking for ${item}`);
     let album = [];
     let y = collection.artist.indexOf(item);
-    for (let x in array.artist) {
+    for (let x in collection.artist) {
         if (x === item) {
             album.push(array[x]);
         }
     }
     return album;
-};
+}
 
 //test findByArtist
 
